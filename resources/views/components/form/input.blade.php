@@ -4,7 +4,8 @@
 
     {{-- Input --}}
     <input id="{{ $id }}" name="{{ $name }}"
-    @isset($isDisabled) disabled @endisset @isset($isReadOnly) readonly @endisset
+    @isset($isDisabled) @if($isReadOnly) disabled @endif @endisset 
+    @isset($isReadOnly) @if($isReadOnly) readonly @endif @endisset
         {{ $attributes->merge(['class' => $makeItemClass()]) }}>
 
 @overwrite
