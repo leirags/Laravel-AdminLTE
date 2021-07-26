@@ -78,6 +78,20 @@ class InputGroupComponent extends Component
     public $errorKey;
 
     /**
+     * mark the input field as Read only.
+     *
+     * @var bool
+     */
+    public $isReadOnly;
+    
+    /**
+     * Mark the input field as Disabled.
+     *
+     * @var bool
+     */
+    public $isDisabled;
+
+    /**
      * Create a new component instance.
      *
      * @return void
@@ -85,7 +99,7 @@ class InputGroupComponent extends Component
     public function __construct(
         $name, $id = null, $label = null, $igroupSize = null, $labelClass = null,
         $fgroupClass = null, $igroupClass = null, $disableFeedback = null,
-        $errorKey = null
+        $errorKey = null, $isReadOnly = null, $isDisabled = null
     ) {
         $this->id = $id ?? $name;
         $this->name = $name;
@@ -95,6 +109,8 @@ class InputGroupComponent extends Component
         $this->labelClass = $labelClass;
         $this->igroupClass = $igroupClass;
         $this->disableFeedback = $disableFeedback;
+        $this->isReadOnly = $isReadOnly;
+        $this->isDisabled = $isDisabled;
 
         // Setup the lookup key for validation errors.
 

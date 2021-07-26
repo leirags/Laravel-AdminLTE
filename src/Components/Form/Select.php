@@ -11,12 +11,12 @@ class Select extends InputGroupComponent
      */
     public function __construct(
         $name, $id = null, $label = null, $igroupSize = null, $labelClass = null,
-        $fgroupClass = null, $igroupClass = null, $disableFeedback = null,
-        $errorKey = null
+        $fgroupClass = null, $igroupClass = null, $disableFeedback = null, 
+        $errorKey = null, $isReadOnly = null, $isDisabled = null
     ) {
         parent::__construct(
             $name, $id, $label, $igroupSize, $labelClass, $fgroupClass,
-            $igroupClass, $disableFeedback, $errorKey
+            $igroupClass, $disableFeedback, $errorKey, $isReadOnly, $isDisabled
         );
     }
 
